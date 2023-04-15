@@ -1,0 +1,71 @@
+1-Modules
+-----------------------------------------------
+ -> Every File is Module (By Default)
+ -> Modules (Encapsulated Code)
+
+ Syntax :
+
+    module.exports = {.....};                   //variable to export in object for
+    module.exports = function_name;             //function to export
+
+ Alternative Syntax :
+    
+    eg:
+
+        const items = ['item1' , 'item2'];
+        module.exports = items;
+
+        if we want to export items insted of doing two things
+
+        module.exports.items = ['item1' , 'item2'];
+    
+    module.exports.item = { ... };
+
+
+-----------------------------------------------
+
+Built-in-Modules
+-----------------------------------------------
+
+-> OS
+-> Path
+-> Fs
+-> HTTP
+
+
+-----------------------------------------------
+
+OS
+----------------------------------------------
+const os = require('os');
+
+console.log(os);
+
+console.log('--------------------------------------------------');
+// Information About Current User
+const userInfo = os.userInfo();
+
+console.log(userInfo);
+console.log('--------------------------------------------------');
+
+//Method return the System Uptime in second
+const uptime = os.uptime();
+
+console.log("The System Up time is :" ,uptime);
+
+console.log('--------------------------------------------------');
+//Operating Sysytem Full Properties
+
+const currentOS = {
+    name:os.type(),
+    release:os.release() ,
+    totalMemory:os.totalmem(),
+    freeMemory:os.freemem(),
+}
+
+console.log(currentOS);
+console.log('--------------------------------------------------');
+
+
+
+ 
